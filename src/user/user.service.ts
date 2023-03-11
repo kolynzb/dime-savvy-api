@@ -23,6 +23,10 @@ export class UserService {
     return this.userRepository.findOne({ where: { id } });
   }
 
+  findByEmail(email: string): Promise<User> {
+    return this.userRepository.findOne({ where: { email } });
+  }
+
   update(updateUserDto: UpdateUserDto, id: number) {
     return this.userRepository.update(id, updateUserDto);
   }
