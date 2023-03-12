@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import {} from '@nestjs/typeorm';
 import { TypeOrmModule } from '@nestjs/typeorm/dist';
+import { HomeModule } from './home/home.module';
+import { UserModule } from './user/user.module';
+import { User } from './user/entity/user.entity';
+import { AuthModule } from './auth/auth.module';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -10,13 +11,16 @@ import { TypeOrmModule } from '@nestjs/typeorm/dist';
       host: 'localhost',
       port: 5432,
       username: 'postgres',
-      password: 'i4iridium14C++',
+      password: '',
       database: 'dimesavvy',
-      entities: [],
+      entities: [User],
       synchronize: true,
     }),
+    HomeModule,
+    UserModule,
+    AuthModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
