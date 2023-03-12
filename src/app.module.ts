@@ -4,6 +4,7 @@ import { HomeModule } from './home/home.module';
 import { UserModule } from './user/user.module';
 import { User } from './user/entity/user.entity';
 import { AuthModule } from './auth/auth.module';
+import { MailModule } from './mail/mail.module';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -19,6 +20,7 @@ import { AuthModule } from './auth/auth.module';
     HomeModule,
     UserModule,
     AuthModule,
+    MailModule,
   ],
   controllers: [],
   providers: [],
