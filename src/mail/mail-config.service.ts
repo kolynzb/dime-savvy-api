@@ -31,7 +31,7 @@ export class MailConfigService implements MailerOptionsFactory {
           this.configService.get('app.workingDirectory'),
           'src',
           'mail',
-          'mail-templates',
+          'templates',
         ),
         adapter: new PugAdapter(),
         options: {
