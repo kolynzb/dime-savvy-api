@@ -89,3 +89,6 @@ Thomas, D., & Hunt, A. - The Pragmatic Programmer: your journey to mastery)
   it easier to add functionalities in the future. You can even include a new rule saying that
   entities/models’ attributes must be accessed through their corresponding getters and setters (in
   your architectural rules document)
+
+- reserach maildev
+- add the vscode extentions
